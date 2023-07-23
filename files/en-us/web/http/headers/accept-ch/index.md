@@ -49,14 +49,22 @@ Vary: Viewport-Width, Width
 > **Note:** Remember to [vary the response](/en-US/docs/Web/HTTP/Client_hints#varying_client_hints)
 > based on the accepted client hints.
 
-## Specifications
+#
+--units <units>: Which items will be migrated, one or more units should be separated as comma. wiki, issues, labels, releases, release_assets, milestones, pull_requests, comments are allowed. Empty means all units.restore-repo# GitHub CLI api
+# https://cli.github.com/manual/gh_api
 
-{{Specifications}}
+gh api \
+  --method DELETE \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  /repos/OWNER/REPO/actions/artifacts/ARTIFACT_ID# GitHub CLI api
+# https://cli.github.com/manual/gh_api
 
-## Browser compatibility
-
-{{Compat}}
-
+gh api \
+  --method DELETE \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  /repos/OWNER/REPO/actions/artifacts/ARTIFACT_ID
 ## See also
 
 - {{HTTPHeader("Vary")}}
